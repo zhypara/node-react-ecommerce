@@ -27,6 +27,8 @@ function App() {
   };
   return (
     <BrowserRouter>
+    
+    
       <div className="grid-container">
         <header className="header">
           <div className="brand">
@@ -36,7 +38,7 @@ function App() {
           <div className="header-links">
             <a href="cart.html">Cart</a>
             {userInfo ? (
-              <Link to="/profile">{userInfo.name}</Link>
+              <Link to="/profile">@{userInfo.name}</Link>
             ) : (
               <Link to="/signin">Sign In</Link>
             )}
@@ -53,21 +55,32 @@ function App() {
             )}
           </div>
         </header>
+   
         <aside className="sidebar">
-          <h3>Shopping Categories</h3>
+          <h3>ТИП ФИГУРЫ</h3>
           <button className="sidebar-close-button" onClick={closeMenu}>
             x
           </button>
           <ul className="categories">
             <li>
-              <Link to="/category/Pants">Pants</Link>
+              <Link to="/category/ФИГУРЫ - ТРЕУГОЛЬНИК">ФИГУРЫ - ТРЕУГОЛЬНИК</Link>
             </li>
 
             <li>
-              <Link to="/category/Shirts">Shirts</Link>
+              <Link to="/category/ФИГУРЫ - ПРЯМОУГОЛЬНИК">ФИГУРЫ - ПРЯМОУГОЛЬНИК</Link>
+            </li>
+            <li>
+              <Link to="/category/ФИГУРЫ - ЯБЛОКО">ФИГУРЫ - ЯБЛОКО</Link>
+            </li>
+            <li>
+              <Link to="/category/ПЕСОЧНЫЕ ЧАСЫ">ПЕСОЧНЫЕ ЧАСЫ</Link>
+            </li>
+            <li>
+              <Link to="/category/ФИГУРЫ - ГРУША">ФИГУРЫ - ГРУША</Link>
             </li>
           </ul>
         </aside>
+        
         <main className="main">
           <div className="content">
             <Route path="/orders" component={OrdersScreen} />
@@ -84,8 +97,14 @@ function App() {
             <Route path="/category/:id" component={HomeScreen} />
             <Route path="/" exact={true} component={HomeScreen} />
           </div>
+          <div class="thumb-wrap">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/pc5VRs3bnF4?start=21" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         </div>
         </main>
-        <footer className="footer">All right reserved.</footer>
+       <a href="fashen-teg" className="fashen-teg">fashen@gmail.com</a>
+        <footer className="footer" >
+        «Стиль это единственное, что вы не можете купить. Он не зависит от того, какая у вас сумка, от ее бренда или цены. Стиль – это отражение нашей души, это эмоция». Альбер Эльбаз.
+          </footer>
       </div>
     </BrowserRouter>
   );

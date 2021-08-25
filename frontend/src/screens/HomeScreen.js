@@ -30,11 +30,12 @@ function HomeScreen(props) {
   };
 
   return (
-    <>
+  <>
       {category && <h2>{category}</h2>}
 
       <ul className="filter">
         <li>
+          
           <form onSubmit={submitHandler}>
             <input
               name="searchKeyword"
@@ -52,6 +53,8 @@ function HomeScreen(props) {
           </select>
         </li>
       </ul>
+      
+      
       {loading ? (
         <div>Loading...</div>
       ) : error ? (

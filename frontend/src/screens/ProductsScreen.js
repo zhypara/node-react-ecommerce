@@ -96,6 +96,7 @@ function ProductsScreen(props) {
       });
   };
   return (
+    
     <div className="content content-margined">
       <div className="product-header">
         <h3>Products</h3>

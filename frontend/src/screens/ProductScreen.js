@@ -45,6 +45,7 @@ function ProductScreen(props) {
   };
 
   return (
+    
     <div>
       <div className="back-to-result">
         <Link to="/">Back to result</Link>
